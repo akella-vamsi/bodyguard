@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+
+<link rel="stylesheet" href="{% static 'capture/style.css' %}" type="text/css">
+    <script src="{% static 'capture/capture.js' %}"></script>
+</head>
+<body bgcolor="#77d1d0">
+
+<p><sup>SECURITY.</sup></p>
+
+
+<div width="370" height="270"  >
+<!--video id="video" width="360" height="260" controls>
+  <source  src="http://127.0.0.1:8000/capture/live" type="video/mp4"
+  Your browser does not support the video tag.
+</video-->
+     <img id="img" src="http://127.0.0.1:8000/capture/live" width="360" height="260" >
+</div>
+<form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+<canvas id="canvas" style="overflow:auto"></canvas><br>
+<button class="button" type="submit"  onclick="capture()">CAPTURE IMAGE</button>
+</body>
+</html>
