@@ -1,4 +1,8 @@
-    body { text-align: center; }
+    body { text-align: center;background-color: #EFE8FC; }
+    p {
+    font-family: "Arial";
+  font-size:32px
+    }
 
    .button {
         background-color: #4CAF50;
@@ -13,6 +17,6 @@
         cursor: pointer;
    }
    div {
-  background-color: lightblue;
+  background-color:#EFE8FC ;
   width:"370";
   }

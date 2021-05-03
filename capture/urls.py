@@ -5,10 +5,9 @@ from .views import *
 
 urlpatterns = [
 
-    path('image_upload', image_view, name='image_upload'),
-    path('success', success, name='success'),
     path('live',livefe , name='live'),
     path('', views.home, name='home'),
+    path('verify',views.verify,name='verify')
 ]
 '''if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,

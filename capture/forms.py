@@ -1,8 +1,6 @@
 from django import forms
-from .models import *
 
-
-class ImageForm(forms.ModelForm):
-    class Meta:
-        model = Captured_Image
-        fields = ['name', 'Main_Img']
+class ImageForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    image = forms.FileField( )
+    hidden_image_field=forms.CharField()
